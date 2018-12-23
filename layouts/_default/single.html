@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+  <head>
+      <title>{{ .Title }}</title>
+      {{ partial "head.html" . }}
+  </head>
+  <body>
+    {{ partial "nav.html" . }}
+    <article id="post-page">
+      <h2 class="title">{{ .Title }}</h2>
+      <div class="by-line post-time">
+        <time><i>{{ .Date.Format "2006-01-02" }}</i></time>
+      </div>
+      <div class="content">
+        {{ .Content }}
+      </div>
+    </article>
+    <footer class="post-footer">
+      <div class="align-right">
+        <span>{{ .Site.Author.name }}</span><br/>
+        <span>{{ .Date.Format "2006-01-02" }}</span>
+      </div>
+    </footer>
+  </body>
+<html>
