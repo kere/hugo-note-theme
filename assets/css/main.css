@@ -729,6 +729,8 @@ body {
     line-height: 1.8em;
     font-weight: normal;
     margin-bottom: 1em; }
+  #post-page .content ul, #post-page .content ol, .note-posts .content ul, .note-posts .content ol {
+    list-style-position: inside; }
 
 .note-post + .note-post:before {
   display: block;

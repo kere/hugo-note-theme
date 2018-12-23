@@ -163,10 +163,13 @@ body{
     font-weight: $post-font-weight;
     margin-bottom: $updngap;
   }
+  .content {
+    ul, ol{
+      list-style-position: inside;
+    }
+  }
 }
 
-.content ul, .content ol {
-}
 
 
 .note-post+.note-post:before {
