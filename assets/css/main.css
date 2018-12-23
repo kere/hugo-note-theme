@@ -619,9 +619,9 @@ body {
     font-size: 1.25em; }
   .content h2 {
     font-size: 1.13em; }
-  .content h3, .content h4 {
+  .content h3, .content h4, .content h5 {
     font-size: 1em; }
-  .content h5, .content h6 {
+  .content h6 {
     font-size: 0.9em; }
   .content h1, .content h2, .content h3, .content h4, .content h5, .content h6 {
     padding: 0; }
