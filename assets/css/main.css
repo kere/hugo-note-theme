@@ -641,7 +641,7 @@ body {
   font-weight: lighter;
   font-size: 0.7em;
   margin-top: -1em;
-  color: #a7a7a7;
+  color: #a8a8a8;
   line-height: 1.4em; }
   .img-alt > small {
     padding: 0 1em;
@@ -650,7 +650,10 @@ body {
 
 #nav-menu {
   top: 0.5rem;
-  right: 1rem; }
+  right: 1em; }
+  @media (min-width: 620px) {
+    #nav-menu {
+      right: 1.5em; } }
 
 #nav-links {
   margin-top: 0.5em; }
@@ -708,6 +711,10 @@ body {
       #header h1 {
         left: 0;
         bottom: 0; } }
+  @media (min-width: 620px) {
+    #header {
+      padding-left: 1.5em;
+      padding-right: 1.5em; } }
 
 /* Posts */
 .note-posts {
@@ -722,6 +729,10 @@ body {
 #post-page, .note-posts {
   padding-left: 1em;
   padding-right: 1em; }
+  @media (min-width: 620px) {
+    #post-page, .note-posts {
+      padding-left: 1.5em;
+      padding-right: 1.5em; } }
   #post-page p, #post-page ul, #post-page ol, .note-posts p, .note-posts ul, .note-posts ol {
     margin-bottom: 1em; }
   #post-page .content ul, #post-page .content ol, .note-posts .content ul, .note-posts .content ol {
@@ -758,6 +769,10 @@ code {
   text-align: right;
   line-height: 2.3rem;
   font-size: 1em; }
+  @media (min-width: 620px) {
+    .post-footer {
+      padding-right: 2em;
+      padding-left: 2em; } }
 
 .el-pagination {
   white-space: nowrap;

@@ -68,7 +68,7 @@ $code-size:$post-font-size * 0.8;
   font-weight: lighter;
   font-size: 0.7em;
   margin-top: -1em;
-  color: #a7a7a7;
+  color: lighten($text-color, 46%);;
   line-height: 1.4em;
   &>small{
     padding: 0 1em;
@@ -79,7 +79,10 @@ $code-size:$post-font-size * 0.8;
 
 #nav-menu{
   top: 0.5rem;
-  right : 1rem;
+  right : 1em;
+  @media (min-width: 620px) {
+    right : 1.5em;
+  }
 }
 #nav-links{
   margin-top: 0.5em;
@@ -149,6 +152,10 @@ $code-size:$post-font-size * 0.8;
       bottom:0;
     }
 	}
+  @media (min-width: 620px) {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
 }
 /* Posts */
 
@@ -167,6 +174,10 @@ $code-size:$post-font-size * 0.8;
 #post-page, .note-posts{
   padding-left: 1em;
   padding-right: 1em;
+  @media (min-width: 620px) {
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+  }
 
   p, ul, ol {
     margin-bottom: $updngap;
@@ -213,6 +224,10 @@ code {
   text-align: right;
   line-height: 2.3rem;
 	font-size: $post-font-size;
+  @media (min-width: 620px) {
+    padding-right:2em;
+    padding-left: 2em;
+  }
 }
 .el-pagination {
   white-space: nowrap;
