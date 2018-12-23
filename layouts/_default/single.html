@@ -7,7 +7,7 @@
   <body>
     {{ partial "nav.html" . }}
     <article id="post-page">
-      <h2 class="title">{{ .Title }}</h2>
+      <h1 class="title">{{ .Title }}</h1>
       <div class="by-line post-time">
         <time><i>{{ .Date.Format "2006-01-02" }}</i></time>
       </div>
@@ -22,4 +22,24 @@
       </div>
     </footer>
   </body>
+  <script>
+    var imgs = document.getElementsByTagName("img");
+    var img, item, span;
+    for (var i = 0; i < imgs.length; i++) {
+      img = imgs[i];
+      if(img.alt == '') continue;
+      item = document.createElement("div");
+      item.className = 'img-alt';
+      span = document.createElement("small");
+      span.innerText = img.alt;
+      item.appendChild(span);
+
+      var parent = img.parentNode;
+      if(parent.lastChild == img){
+        parent.appendChild(item);
+      } else {
+        parent.insertBefore(item, img.nextSibling);
+      }
+    }
+  </script>
 <html>

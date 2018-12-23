@@ -17,6 +17,7 @@ html, body, h1, h2, h3, h4, h5, h6, p, ul, ol, li, img {
 }
 /*- Base color -*/
 
+$updngap: 1em;
 //$background-color: #FCEFDF;
 $background-color: #FBFAF5;
 $blockquote-color: rgba(240,240,240,0.7);
@@ -24,15 +25,10 @@ $text-color: #333333;
 $text-light-color: rgba(0,0,0,0.6);
 $text-dark-color: #000000;
 /*- Base settings -*/
-$updngap: 1em;
 $border-color:rgba(0, 0, 0, 0.14);
-$title-font-size: 1.4em;
 $title-font-weight: bold;
-$post-font-size: 1em;
-$post-line-height: 1.8em;
 $post-font-weight: normal;
 // $code-background: #002B36;
-$code-size:0.8em;
 $code-background: #ECECEC;
 $code-color: #333333;
 
@@ -47,7 +43,6 @@ body {
 	line-height: 1.2em;
   font-style: normal;
   font-weight: normal;
-  max-width: 1000px;
   margin: 0 auto;
   color: $text-color;
 }

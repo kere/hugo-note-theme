@@ -720,6 +720,10 @@ body {
   #post-page h4, #post-page h5, #post-page h6 {
     padding: 0;
     line-height: 1.3em; }
+  #post-page .content p {
+    text-indent: 1em; }
+  #post-page .content h1 + p, #post-page .content h2 + p, #post-page .content h3 + p, #post-page .content h4 + p, #post-page .content h5 + p, #post-page .content h6 + p {
+    text-indent: 0; }
 
 #post-page, .note-posts {
   padding-left: 15px;
@@ -766,11 +770,13 @@ code {
 
 .el-pagination {
   white-space: nowrap;
-  padding: 2px 5px;
   color: #303133;
   font-weight: 700;
   text-align: center;
-  margin-top: 3em; }
+  margin-top: 1em;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-bottom: 3em; }
 
 .el-pager {
   user-select: none;

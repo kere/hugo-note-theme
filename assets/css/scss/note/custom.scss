@@ -5,6 +5,18 @@ html{
 //  background-image: url(/css/background-2.jpg);
   background-image: url($bk-img);
 }
+body{
+  font-size: 1.2em;
+  @media (min-width: 1100px) {
+    font-size: 1.4em;
+	}
+  max-width: 960px;
+}
+
+
+$post-font-size: 1em;
+$post-line-height: 1.5em;
+$code-size:$post-font-size * 0.8;
 
 .content{
   a.reversefootnote{
@@ -16,49 +28,61 @@ html{
     background: $border-color;
     border-radius: 5px;
   }
+
+  font-size: $post-font-size;
+	line-height: $post-line-height;
+
+  h1{
+    font-size: $post-font-size * 1.25;
+  }
+  h2{
+    font-size: $post-font-size * 1.13;
+  }
+  h3, h4{
+    font-size: $post-font-size * 1;
+  }
+  h5, h6{
+    font-size: $post-font-size * 0.9;
+  }
+  h1,h2,h3,h4,h5,h6{
+    padding: 0;
+  }
+  p{
+    text-indent: 1em;
+  }
+  h1+p,h2+p,h3+p,h4+p,h5+p,h6+p{
+    text-indent: 0;
+  }
 }
 
-h1.title, h2.title{
+.title{
+  font-size: $post-font-size * 1.25;
+  font-weight: $title-font-weight;
   padding-bottom: .3em;
-  line-height: 1.5em;
 }
 
-body{
-  font-size: 1.2em;
-	line-height: 1.2em;
-  /*- large -*/
-  @media (min-width: 900px) {
-		font-size: 1.4em;
-	  line-height: 1.4em;
-	}
-  @media (min-width: 1800px) {
-		font-size: 1.6em;
-	  line-height: 1.6em;
-    max-width: 1600px;
-	}
 
+.img-alt{
+  text-align: center;
+  text-indent: 0;
+  font-weight: lighter;
+  font-size: 0.5em;
+  margin-top: -1em;
+  color: #a7a7a7;
+  line-height: 1.4em;
+  &>small{
+    padding: 0 1em;
+    padding-bottom:0.3em;
+    border-bottom:1px solid #E2E2E2;
+  }
 }
+
 #nav-menu{
   top: 0.5rem;
   right : 1rem;
 }
-
-.img-desc{
-  font-size: 0.8em;
-  color: lighten($text-color, 30%);
-  font-weight: 200;
-  weidth: 100%;
-  margin:0 auto;
-  margin-top: -1em;
-  margin-bottom: 2em;
-  text-align: center;
-
-  span{
-    display: inline-block;
-    min-width: 30%;
-    border-bottom: 1px solid $border-color;
-    padding: 0 1em;
-  }
+#nav-links{
+  margin-top: 0.5em;
 }
 
 .avatar{
@@ -82,7 +106,7 @@ body{
 
 .post-time{
   font-family: serif;
-  font-size: 18px;
+  font-size: $post-font-size*0.8;
   color: lighten($text-color, 30%);
   a{
     color: lighten($text-color, 30%);
@@ -92,8 +116,8 @@ body{
 .arc-list{
   list-style-position: outside;
   li{
-    margin-left: 1.5em;
-    margin-top: 0.5em;
+    margin-left: 1.5rem;
+    margin-top: 0.5rem;
   }
 }
 
@@ -107,26 +131,20 @@ body{
   font-weight:lighter;
 }
 
-.title{
-  font-size: $title-font-size;
-  font-weight: $title-font-weight;
-}
-
 #header{
   padding:0 1em;
   .avatar{
     position: relative;
 
-    @media (min-width: 900px) {
-      top : 5px;
-      width: 36px;
-      height: 36px;
+    @media (min-width: 1100px) {
+      width: 1.5em;
+      height: 1.5em;
     }
   }
   h1{
     display: none;
     /*- large -*/
-    @media (min-width: 900px) {
+    @media (min-width: 1100px) {
       left:0;
       bottom:0;
     }
@@ -135,32 +153,22 @@ body{
 /* Posts */
 
 .note-posts {
+  padding-bottom:3em;
   list-style-type: none;
   li{
-    padding-bottom: 0.8em;
+    padding-bottom: 0.8rem;
   }
 }
 
 #post-page {
   margin-bottom: $updngap;
-  h1,h2,h3{
-    padding: 0;
-    line-height: 1.5em;
-  }
-  h4,h5,h6{
-    padding: 0;
-    line-height: 1.3em;
-  }
 }
 
 #post-page, .note-posts{
-  padding-left: 15px;
-  padding-right: 15px;
+  padding-left: 1em;
+  padding-right: 1em;
 
   p, ul, ol {
-    font-size: $post-font-size;
-    line-height: $post-line-height;
-    font-weight: $post-font-weight;
     margin-bottom: $updngap;
   }
   .content {
@@ -170,8 +178,6 @@ body{
   }
 }
 
-
-
 .note-post+.note-post:before {
     display: block;
     content: '';
@@ -179,7 +185,7 @@ body{
     margin: 0.1rem auto;
     border-style: none;
     border-bottom:1px dashed $border-color;
-    margin-bottom: $updngap;
+    margin-bottom: 1.5em;
 }
 
 
@@ -190,7 +196,7 @@ code {
 
 .highlighter-rouge{
   font-size: $code-size;
-  padding: 1em;
+  padding: 1rem;
   background-color: $code-background;
   margin: 0;
   margin-bottom: $updngap;
@@ -200,8 +206,8 @@ code {
   }
 }
 .post-footer {
-  margin-top: 3em;
-  padding-bottom: 6em;
+  margin-top: 3rem;
+  padding-bottom: 6rem;
   padding-right: 1.5rem;
   padding-left: 1.5rem;
   text-align: right;
@@ -210,11 +216,13 @@ code {
 }
 .el-pagination {
   white-space: nowrap;
-  padding: 2px 5px;
   color: #303133;
   font-weight: 700;
   text-align:center;
-  margin-top: 3em;
+  margin-top: 1rem;
+  padding-left:15px;
+  padding-right:15px;
+  padding-bottom: 3rem;
 }
 .el-pager {
   user-select: none;

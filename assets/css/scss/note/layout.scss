@@ -162,8 +162,7 @@
 .by-line {
   display: block;
   color: lighten($text-color, 25%);
-  line-height: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: $updngap;
   font-weight: 200;
 }
 
