@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html>
   <head>
-      <title>{{ .Title }}</title>
-      {{ partial "head.html" . }}
+    <title>{{ .Title }}</title>
+    {{ partial "head.html" . }}
   </head>
   <body>
 
@@ -22,6 +22,15 @@
         {{ .Content }}
       </div>
     </article>
+    <script type="text/javascript">
+      var t = document.getElementById("post-page");
+      var imgs = t.querySelectorAll('img'), img;
+      for (var i = 0; i < imgs.length; i++) {
+        img = imgs[i];
+        img.setAttribute('data-echo', img.src);
+        img.src = '';
+      }
+    </script>
     <footer class="post-footer">
       <div class="align-right">
         {{ if .Params.author }}
@@ -61,4 +70,5 @@
     }
     imageTitle();
   </script>
+  {{ partial "echojs.html" . }}
 <html>

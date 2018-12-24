@@ -13,6 +13,16 @@
   </ul>
   {{ partial "pagination.html" . }}
 </div>
+<script type="text/javascript">
+  var t = document.getElementById("container");
+  var imgs = t.querySelectorAll('img'), img;
+  for (var i = 0; i < imgs.length; i++) {
+    img = imgs[i];
+    img.setAttribute('data-echo', img.src);
+    img.src = '';
+  }
+</script>
 {{ partial "footer.html" . }}
   </body>
+{{ partial "echojs.html" . }}
 </html>
