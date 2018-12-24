@@ -22,7 +22,11 @@
     </article>
     <footer class="post-footer">
       <div class="align-right">
+        {{ if .Params.author }}
+        <span>{{ .Params.author }}</span><br/>
+        {{else}}
         <span>{{ .Site.Author.name }}</span><br/>
+        {{end}}
         <span>{{ .Date.Format "2006-01-02" }}</span>
       </div>
     </footer>
