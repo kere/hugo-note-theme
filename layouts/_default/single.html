@@ -7,7 +7,7 @@
   <body>
     {{ partial "nav.html" . }}
     <article id="post-page">
-      <h1 class="title m-t-lg">{{ .Title }}</h1>
+      <h1 class="title m-t-l">{{ .Title }}</h1>
       <div class="by-line post-time">
         <time><i>{{ .Date.Format "2006-01-02" }}</i></time>
         <div class="f-right">
@@ -27,6 +27,7 @@
       </div>
     </footer>
   </body>
+
   <script>
     var imgs = document.getElementsByTagName("img");
     var img, item, span;
@@ -46,5 +47,6 @@
         parent.insertBefore(item, img.nextSibling);
       }
     }
+    var body = document.body;
   </script>
 <html>
