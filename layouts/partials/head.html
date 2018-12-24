@@ -1,22 +1,14 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
-{{ .Hugo.Generator }}
-
-{{ if eq .URL "/" }}
-<title>{{ .Title }}</title>
-<meta property="og:title" content="{{ .Title }}">
-<meta property="og:type" content="website">
-{{ else }}
-<title>{{ .Title }} - {{ .Site.Title }}</title>
-<meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
-{{ end }}
-
-{{ if eq .URL "/" }}
-<meta property="description" content="{{ .Site.Params.description }}">
-{{ else }}
-  {{ if .Description }}
+{{ if .IsPage }}
+  <title>{{ .Title }}</title>
+  <meta property="og:title" content="{{ .Title }}">
+  <meta property="og:type" content="website">
   <meta property="description" content="{{ .Description }}">
-  {{ end }}
+{{ else }}
+  <title>{{ .Title }} - {{ .Site.Title }}</title>
+  <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+  <meta property="description" content="{{ .Site.Params.description }}">
 {{ end }}
 
 {{ if .Keywords }}
@@ -27,7 +19,7 @@
 <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
 
-<!--{{ $styles := resources.Get "css/main.css" | minify | fingerprint }}-->
+<!--{{ $styles := resources.Get "css/main.css" | minify }}-->
 <!-- $styles := resources.Get "css/scss/main.scss" | resources.ToCSS | fingerprint -->
 
 <link rel="stylesheet" href="{{ $styles.Permalink }}" integrity="{{ $styles.Data.Integrity }}" media="screen">
