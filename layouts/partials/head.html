@@ -1,22 +1,23 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 {{ if .IsPage }}
-  <title>{{ .Title }}</title>
-  <meta property="og:title" content="{{ .Title }}">
-  <meta property="og:type" content="website">
   <meta property="description" content="{{ .Description }}">
 {{ else }}
-  <title>{{ .Title }} - {{ .Site.Title }}</title>
-  <meta property="og:title" content="{{ .Title }} - {{ .Site.Title }}">
+  <title>{{.Title }}</title>
   <meta property="description" content="{{ .Site.Params.description }}">
 {{ end }}
+{{ if .Params.author }}
+  <meta property="author" content="{{ .Params.author }}">
+{{else}}
+  <meta property="author" content="{{ .Site.Author.name }}">
+{{end}}
 
 {{ if .Keywords }}
-<meta property="keywords" content ="{{ delimit .Keywords ", " }}">
+  <meta property="keywords" content ="{{ delimit .Keywords ", " }}">
 {{ end }}
 
 {{ if .RSSLink }}
-<link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
+  <link href="{{ .RSSLink }}" rel="alternate" type="application/rss+xml" title="{{ .Site.Title }}" />
 {{ end }}
 
 <!--{{ $styles := resources.Get "css/main.css" | minify | fingerprint }}-->

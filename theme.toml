@@ -1,21 +1,26 @@
-# theme.toml template for a Hugo theme
-# See https://github.com/gohugoio/hugoThemes#themetoml for an example
+languageCode = "cn-zh"
+title = "Onqee"
+paginate = 10
+uglyURLs = true
+enableRobotsTXT = true
+hasCJKLanguage = true
 
-name = "Note"
-license = "MIT"
-licenselink = "https://github.com/yourname/yourtheme/blob/master/LICENSE"
-description = ""
-homepage = "http://example.com/"
-tags = []
-features = []
-min_version = "0.41"
+[menu]
+  [[menu.main]]
+    identifier = "dev"
+    name = "编程"
+    title = "程序开发"
+    url = "/dev.html"
+    weight = 0
+  [[menu.main]]
+    identifier = "notes"
+    name = "日志"
+    title = "我的个人日志"
+    url = "/notes.html"
+    weight = 0
+
+[taxonomies]
+  tag = "tags"
 
 [author]
-  name = ""
-  homepage = ""
-
-# If porting an existing theme
-[original]
-  name = ""
-  homepage = ""
-  repo = ""
+  name = "onqee"
