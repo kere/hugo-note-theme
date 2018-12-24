@@ -507,7 +507,7 @@ img[title="shadow"] {
   height: 4px;
   width: 1.5em;
   background-color: #333333;
-  margin-top: 8px; }
+  margin-top: 0.6em; }
   #menu:after, #menu:before {
     content: "";
     display: block;
@@ -555,9 +555,8 @@ img[title="shadow"] {
   position: relative;
   padding: 0 0.5em; }
   #header a {
-    text-decoration: none;
-    display: inline-block; }
-  #header div {
+    text-decoration: none; }
+  #header div.bar {
     margin: 0 auto;
     height: 2em; }
   #header h1 {

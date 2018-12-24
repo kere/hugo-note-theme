@@ -1,5 +1,5 @@
 <header id="header" class="parent justify-spaceBetween">
-  <div class="inner w100 relative">
+  <div class="bar inner w100 relative">
     <span class="absolute left bottom">
       <a href="{{ .Site.BaseURL }}/">
         {{ partial "avatar.html" . }}
@@ -11,22 +11,22 @@
       {{ partial "link.html" . }}
     </span>
   </div>
+
+  <nav id="nav">
+    <div id="nav-list">
+      <a href="{{ .Site.BaseURL }}/">首页</a>
+
+      <!-- Nav links -->
+      {{ partial "link.html" . }}
+      <!-- Nav pages -->
+    </div>
+    <!-- Nav footer -->
+  </nav>
+  <a id="nav-menu">
+    <div id="menu"></div>
+  </a>
 </header>
 
-<nav id="nav">
-	<div id="nav-list">
-		<a href="{{ .Site.BaseURL }}/">首页</a>
-
-    <!-- Nav links -->
-    {{ partial "link.html" . }}
-		<!-- Nav pages -->
-	</div>
-  <!-- Nav footer -->
-</nav>
-
-<a id="nav-menu">
-  <div id="menu"></div>
-</a>
 
 <script type="text/javascript">
 var normal = document.getElementById("nav-menu");
