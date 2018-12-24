@@ -398,7 +398,7 @@ img[title="shadow"] {
   padding: 0.33334em 0;
   font-size: 1.5em;
   font-weight: 400; }
-  @media (min-width: 940px) {
+  @media (min-width: 1200px) {
     #nav a, #nav-left a {
       font-size: 1em; } }
   #nav a:hover, #nav-left a:hover {
@@ -462,7 +462,7 @@ img[title="shadow"] {
     #nav-left.menu-open-left {
       width: 30%; } }
 
-@media (max-width: 940px) {
+@media (max-width: 1200px) {
   #nav-links {
     display: none; } }
 
@@ -488,7 +488,7 @@ img[title="shadow"] {
   right: 25px;
   z-index: 10;
   height: 24px; }
-  @media (min-width: 940px) {
+  @media (min-width: 1200px) {
     #nav-menu {
       display: none; } }
 
@@ -499,7 +499,7 @@ img[title="shadow"] {
   left: 25px;
   z-index: 10;
   height: 24px; }
-  @media (min-width: 940px) {
+  @media (min-width: 1200px) {
     #nav-menu-left {
       display: none; } }
 
@@ -541,7 +541,7 @@ img[title="shadow"] {
 .fixed {
   position: fixed;
   width: 100%; }
-  @media (min-width: 940px) {
+  @media (min-width: 1200px) {
     .fixed {
       position: static; } }
 
@@ -550,7 +550,6 @@ img[title="shadow"] {
   padding: 0; }
 
 #header {
-  border-bottom: 1px solid rgba(0, 0, 0, 0.14);
   text-align: center;
   margin-bottom: 1rem;
   position: relative;
@@ -641,7 +640,7 @@ body {
   text-align: center;
   text-indent: 0;
   font-weight: lighter;
-  font-size: 0.7em;
+  font-size: 0.8em;
   margin-top: -1em;
   color: #a8a8a8;
   line-height: 1.4em; }

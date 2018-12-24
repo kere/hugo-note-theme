@@ -7,7 +7,7 @@
   <body>
     {{ partial "nav.html" . }}
     <article id="post-page">
-      <h1 class="title m-t-l">{{ .Title }}</h1>
+      <h1 class="title">{{ .Title }}</h1>
       <div class="by-line post-time">
         <time><i>{{ .Date.Format "2006-01-02" }}</i></time>
         <div class="f-right">
@@ -16,7 +16,7 @@
           {{end}}
         </div>
       </div>
-      <div class="content">
+      <div class="content m-t">
         {{ .Content }}
       </div>
     </article>
@@ -29,24 +29,30 @@
   </body>
 
   <script>
-    var imgs = document.getElementsByTagName("img");
-    var img, item, span;
-    for (var i = 0; i < imgs.length; i++) {
-      img = imgs[i];
-      if(img.alt == '') continue;
-      item = document.createElement("div");
-      item.className = 'img-alt';
-      span = document.createElement("small");
-      span.innerText = img.alt;
-      item.appendChild(span);
+    function imageTitle(){
+      var postPage = document.getElementById("post-page");
+      if (!postPage){
+        return;
+      }
+      var imgs = postPage.querySelectorAll('img')
+      var img, item, span;
+      for (var i = 0; i < imgs.length; i++) {
+        img = imgs[i];
+        if(img.alt == '') continue;
+        item = document.createElement("div");
+        item.className = 'img-alt';
+        span = document.createElement("small");
+        span.innerText = img.alt;
+        item.appendChild(span);
 
-      var parent = img.parentNode;
-      if(parent.lastChild == img){
-        parent.appendChild(item);
-      } else {
-        parent.insertBefore(item, img.nextSibling);
+        var parent = img.parentNode;
+        if(parent.lastChild == img){
+          parent.appendChild(item);
+        } else {
+          parent.insertBefore(item, img.nextSibling);
+        }
       }
     }
-    var body = document.body;
+    imageTitle();
   </script>
 <html>

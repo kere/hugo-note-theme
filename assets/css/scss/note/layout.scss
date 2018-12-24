@@ -1,5 +1,6 @@
 /* -- General Layout -- */
 
+$menu-page-width : 1200px;
 /* Navigation */
 
 #nav, #nav-left {
@@ -9,7 +10,7 @@
     padding: 0.33334em 0;
     font-size: 1.5em;
     font-weight: 400;
-    @media (min-width: 940px) {
+    @media (min-width: $menu-page-width) {
       font-size: 1em;
     }
     &:hover {
@@ -40,7 +41,7 @@
 }
 
 #nav-links {
-  @media (max-width: 940px) {
+  @media (max-width: $menu-page-width) {
     display:none;
   }
   a {
@@ -62,17 +63,16 @@
 }
 
 /* Icon menu */
-
 #nav-menu {
   @include icon-position(right);
-  @media (min-width: 940px) {
+  @media (min-width: $menu-page-width) {
     display:none;
   }
 }
 
 #nav-menu-left {
   @include icon-position(left);
-  @media (min-width: 940px) {
+  @media (min-width: $menu-page-width) {
     display:none;
   }
 }
@@ -123,7 +123,7 @@
 .fixed {
   position: fixed;
   width: 100%;
-  @media (min-width: 940px) {
+  @media (min-width: $menu-page-width) {
     position: static;
   }
 }
@@ -134,7 +134,6 @@
 }
 
 #header {
-  border-bottom:  1px solid $border-color;
   text-align: center;
   margin-bottom: 1rem;
   position: relative;

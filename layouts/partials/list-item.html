@@ -1,5 +1,5 @@
 <li class="note-post content">
-  <h1 class="title"><a href="{{ .Permalink }}">{{ .Title }}</a></h1>
+  <a href="{{ .Permalink }}"><h1 class="title">{{ .Title }}</h1> </a>
   <div class="by-line post-time">
     <time datetime="{{ .Date.Format "2006-01-02" }}"> <i>{{ .Date.Format "2006-01-02" }}</i> </time>
     <div class="f-right">
@@ -10,12 +10,11 @@
   </div>
 
   {{ if .Params.image }}
-    <a href="{{ .Permalink}}"><img src="{{ .Params.image }}"></a>
+  <a href="{{ .Permalink}}"><img src="{{ .Params.image }}"></a>
   {{ end }}
-  <p>
-    <a href="{{ .Permalink }}">
-      {{ .Summary }}
-      {{ if .Truncated }} <span class="read-more"> Read More -&gt; </span> {{ end }}
+  
+  <a href="{{ .Permalink }}">
+    {{ .Summary }}
+    {{ if .Truncated }} <span class="read-more"> Read More -&gt; </span> {{ end }}
   </a>
-  </p>
 </li>

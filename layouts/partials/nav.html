@@ -67,24 +67,5 @@ function menuClick() {
 	}
 }
 
-function imageTitle(){
-  var postPage = document.getElementById("post-page");
-	if (!postPage){
-		return;
-	}
-	var divNode
-	var img;
-	var images = postPage.querySelectorAll('img')
-	for (var i in images) {
-		img = images[i]
-		if(img.alt==''){
-			continue
-		}
-
-		img.outerHTML = img.outerHTML + '<div class="img-desc"><span>^ ' + img.alt+' ^</span></div>'
-	}
-}
-
 menuClick();
-imageTitle();
 </script>
