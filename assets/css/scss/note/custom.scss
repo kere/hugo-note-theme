@@ -126,9 +126,11 @@ $code-size:$post-font-size * 0.8;
 }
 
 .read-more{
+  display: block;
   color: lighten($text-color, 30%);
   text-decoration: underline;
   font-weight:lighter;
+  margin-top: 1em;
 }
 
 #header{
@@ -160,7 +162,7 @@ $code-size:$post-font-size * 0.8;
   padding-bottom:3em;
   list-style-type: none;
   li{
-    padding-bottom: 0.8rem;
+    padding-bottom: 1.5em;
   }
 }
 
@@ -190,7 +192,7 @@ $code-size:$post-font-size * 0.8;
     display: block;
     content: '';
     height: 0;
-    margin: 0.1rem auto;
+    margin: auto;
     border-style: none;
     border-bottom:1px dashed $border-color;
     margin-bottom: 1.5em;
