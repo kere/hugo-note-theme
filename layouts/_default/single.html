@@ -7,9 +7,14 @@
   <body>
     {{ partial "nav.html" . }}
     <article id="post-page">
-      <h1 class="title">{{ .Title }}</h1>
+      <h1 class="title m-t-lg">{{ .Title }}</h1>
       <div class="by-line post-time">
         <time><i>{{ .Date.Format "2006-01-02" }}</i></time>
+        <div class="f-right">
+          {{ if .Params.tags }}
+             {{range .Params.tags}}<a href="/tags/{{ . | urlize}}.html">{{ . }}</a> {{end}}
+          {{end}}
+        </div>
       </div>
       <div class="content">
         {{ .Content }}

@@ -5,7 +5,7 @@
   </head>
   <body>
 {{ partial "nav.html" . }}
-<div id="container" class="content">
+<div id="container">
   <ul class="note-posts">
 {{ range $index, $element := $.Paginator.Pages }}
    {{ partial "list-item.html" . }}

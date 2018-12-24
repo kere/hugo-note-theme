@@ -47,10 +47,6 @@ body {
   color: $text-color;
 }
 
-h1,h2,h3, h4, h5, h6 {
-	padding: 0.66667em 0;
-}
-
 /*- Link -*/
 a {
 	color: $text-color;
@@ -87,3 +83,4 @@ a {
 .left { left: 0 }
 .align-center{text-align:center}
 .align-rigth{text-align:right}
+.m-t-lg{margin-top: 1.5em}
